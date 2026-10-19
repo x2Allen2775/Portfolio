@@ -26,3 +26,4 @@ dist-ssr
 # Raw root media duplicates (assets are tracked in public/)
 /*.mov
 /*.mp4
+/Support Ticket Triage Agent Demo Runner.png

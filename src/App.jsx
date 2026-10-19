@@ -21,32 +21,18 @@ const LinkedInIcon = () => (
 const projects = [
   { 
     id: "01", 
-    type: "EDGE AI & HEALTHCARE CV", 
-    title: "Anemia-Screen", 
-    meta: "PyTorch / timm / FastAPI", 
-    stat: "5,172 Clinical Img", 
-    video: "/videos/anemia.mp4",
-    image: "/images/forone.png", 
-    fallbackImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85",
-    github: "https://github.com/x2Allen2775/ForOne--Cline-Submission",
-    linkedinPost: "https://lnkd.in/p/gviN3abP",
-    copy: "A local-first, offline-capable clinical decision-support pipeline that non-invasively screens for anemia from images of the palpebral conjunctiva (70% weight) and palm (30% weight). Features automated quality gating (Laplacian blur variance, brightness clipping), 2D spatial Grad-CAM interpretability, and a WHO/MoHFW-aligned Clinical NLP symptom parser with 55/55 automated tests passed." 
+    type: "AUTONOMOUS AGENTS & LLM ORCHESTRATION", 
+    title: "Support Triage Agent", 
+    meta: "LangGraph / Gemini 2.5 / n8n", 
+    stat: "Deterministic Guardrails", 
+    image: "/images/triage_agent.png", 
+    fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/Autonomous-Support-Ticket-Triage-Resolution-Agent",
+    linkedinPost: "https://lnkd.in/p/gK_vmWze",
+    copy: "A production-grade autonomous customer support triage microservice built with Python 3.13, LangChain / LangGraph, Google Gemini 2.5 Flash, FastAPI, and n8n Workflow Automation. Unlike simple prompt wrappers that guess answers, this system acts like a senior customer support engineer: it autonomously investigates internal databases, billing records, and company SOP runbooks before formulating a verified triage decision and staging refunds with strict deterministic Python guardrails (forcing human sign-off for P0/P1 outages and refund staging, active prompt injection defense, and sub-ms idempotency caching)." 
   },
   { 
     id: "02", 
-    type: "BIOMECHANICS & KINEMATICS", 
-    title: "SPJURY", 
-    meta: "MediaPipe / OpenCV / Flask", 
-    stat: "ICC 15° Compliance", 
-    video: "/videos/spjury.mp4",
-    image: "/images/spjury.png", 
-    fallbackImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85",
-    github: "https://github.com/x2Allen2775/Spjury",
-    linkedinPost: "https://lnkd.in/p/gf96Nsr5",
-    copy: "A computer-vision sports analytics platform performing real-time pose estimation to identify injury vulnerabilities in Cricket and Tennis. Implements an ICC 15° Rule Legality Engine tracking dynamic elbow extension angles across 8 delivery phases, alongside knee joint strain and trunk lateral tilt analysis to predict rotator cuff and lumbar disc injuries." 
-  },
-  { 
-    id: "03", 
     type: "DOCUMENT AI & SPATIAL OCR", 
     title: "SplitSnap", 
     meta: "Donut / EasyOCR / Next.js", 
@@ -59,7 +45,7 @@ const projects = [
     copy: "A smart bill-splitting platform pairing a 3-zone spatial layout parser with an end-to-end visual document transformer (Naver Donut Swin-B + mBART) fine-tuned on augmented Indian dining receipts. Computes proportional tax (CGST/SGST), service charges, and discounts with mathematical fairness equations and single-paisa rounding balance reconciliation." 
   },
   { 
-    id: "04", 
+    id: "03", 
     type: "EXPLAINABLE AI & CLINICAL EDGE", 
     title: "InsuLens", 
     meta: "MATLAB / ResNet-50", 
@@ -73,19 +59,20 @@ const projects = [
     copy: "A hybrid diagnostic pipeline for early rural screening of Diabetic Retinopathy across 5 ICDR severity classes. Engineered a Hybrid Fail-Safe Switch combining ResNet-50 (83.9% validation accuracy) with classical morphological mathematical algorithms for lesion detection (Microaneurysms, Hemorrhages), enforcing automatic fallback whenever deep learning confidence falls below 65%." 
   },
   { 
-    id: "05", 
-    type: "FINANCIAL NLP & CACHING", 
-    title: "FinNews Pipeline", 
-    meta: "FastAPI / FinBERT / SQLite", 
-    stat: "<2ms Response Time", 
-    image: "/images/newsfetcher.jpeg", 
-    fallbackImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=85",
-    github: "https://github.com/x2Allen2775/News-fetcher-and-filter",
-    linkedinPost: "https://lnkd.in/p/gQXWx35p",
-    copy: "An automated financial news ingestion, NLP enrichment, and low-latency delivery system. Runs an APScheduler background worker every 15 minutes to ingest live market feeds via NewsAPI, computing ProsusAI/FinBERT sentiment scoring and spaCy named entity extraction (organizations, countries, market drivers). Precomputes queries into high-performance SQLite caching to eliminate real-time inference lag, delivering complex filtered multi-sector queries in sub-2ms." 
+    id: "04", 
+    type: "EDGE AI & HEALTHCARE CV", 
+    title: "Anemia-Screen", 
+    meta: "PyTorch / timm / FastAPI", 
+    stat: "5,172 Clinical Img", 
+    video: "/videos/anemia.mp4",
+    image: "/images/forone.png", 
+    fallbackImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/ForOne--Cline-Submission",
+    linkedinPost: "https://lnkd.in/p/gviN3abP",
+    copy: "A local-first, offline-capable clinical decision-support pipeline that non-invasively screens for anemia from images of the palpebral conjunctiva (70% weight) and palm (30% weight). Features automated quality gating (Laplacian blur variance, brightness clipping), 2D spatial Grad-CAM interpretability, and a WHO/MoHFW-aligned Clinical NLP symptom parser with 55/55 automated tests passed." 
   },
   { 
-    id: "06", 
+    id: "05", 
     type: "DISTRIBUTED PLATFORM & MOBILE APP", 
     title: "WANDR", 
     meta: "FastAPI / Postgres / Flutter", 
@@ -98,16 +85,29 @@ const projects = [
     copy: "A social travel companion platform built around interest-based trip matching, community coordination, and multi-tier identity verification. Implemented a Tri-Level Trust & Safety (KYC) in-memory DPDP-compliant verification pipeline utilizing OCR and selfie matching without permanent raw media retention. Backed by FastAPI, SQLAlchemy 2.0, PostgreSQL, Docker, and Flutter with Firebase phone OTP authorization." 
   },
   { 
+    id: "06", 
+    type: "FINANCIAL NLP & CACHING", 
+    title: "FinNews Pipeline", 
+    meta: "FastAPI / FinBERT / SQLite", 
+    stat: "<2ms Response Time", 
+    image: "/images/newsfetcher.jpeg", 
+    fallbackImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/News-fetcher-and-filter",
+    linkedinPost: "https://lnkd.in/p/gQXWx35p",
+    copy: "An automated financial news ingestion, NLP enrichment, and low-latency delivery system. Runs an APScheduler background worker every 15 minutes to ingest live market feeds via NewsAPI, computing ProsusAI/FinBERT sentiment scoring and spaCy named entity extraction (organizations, countries, market drivers). Precomputes queries into high-performance SQLite caching to eliminate real-time inference lag, delivering complex filtered multi-sector queries in sub-2ms." 
+  },
+  { 
     id: "07", 
-    type: "AUTONOMOUS AGENTS & LLM ORCHESTRATION", 
-    title: "Support Triage Agent", 
-    meta: "LangGraph / Gemini 2.5 / n8n", 
-    stat: "Deterministic Guardrails", 
-    image: "/images/triage_agent.png", 
-    fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=85",
-    github: "https://github.com/x2Allen2775/Autonomous-Support-Ticket-Triage-Resolution-Agent",
-    linkedinPost: "https://lnkd.in/p/gK_vmWze",
-    copy: "A production-grade autonomous customer support triage microservice built with Python 3.13, LangChain / LangGraph, Google Gemini 2.5 Flash, FastAPI, and n8n Workflow Automation. Unlike simple prompt wrappers that guess answers, this system acts like a senior customer support engineer: it autonomously investigates internal databases, billing records, and company SOP runbooks before formulating a verified triage decision and staging refunds with strict deterministic Python guardrails (forcing human sign-off for P0/P1 outages and refund staging, active prompt injection defense, and sub-ms idempotency caching)." 
+    type: "BIOMECHANICS & KINEMATICS", 
+    title: "SPJURY", 
+    meta: "MediaPipe / OpenCV / Flask", 
+    stat: "ICC 15° Compliance", 
+    video: "/videos/spjury.mp4",
+    image: "/images/spjury.png", 
+    fallbackImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/Spjury",
+    linkedinPost: "https://lnkd.in/p/gf96Nsr5",
+    copy: "A computer-vision sports analytics platform performing real-time pose estimation to identify injury vulnerabilities in Cricket and Tennis. Implements an ICC 15° Rule Legality Engine tracking dynamic elbow extension angles across 8 delivery phases, alongside knee joint strain and trunk lateral tilt analysis to predict rotator cuff and lumbar disc injuries." 
   },
 ];
 
