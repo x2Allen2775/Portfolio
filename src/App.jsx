@@ -280,10 +280,15 @@ function App() {
             <p className="chapter-label">
               HARDIK SINGH® <span>///</span> EDGE AI / BIOMECHANICS / SYSTEMS
             </p>
-            <h1>
-              HARDIK<br />
-              <i>SINGH</i><br />
-              ENGINEER<span>®</span>
+            <h1 className="hero-headline">
+              <span className="hero-name-line">HARDIK</span>
+              <span className="hero-name-line stroked"><i>SINGH</i></span>
+              <div className="hero-degree-lockup">
+                <span className="hero-degree-kicker">STUDENT OF</span>
+                <span className="hero-degree-title">
+                  MECHANICAL ENGINEERING<span>®</span>
+                </span>
+              </div>
             </h1>
             <p className="hero-sub">
               Undergraduate at IIT Guwahati building local-first, low-latency intelligence — from computer-vision biomechanics and edge clinical screening to high-throughput financial pipelines.

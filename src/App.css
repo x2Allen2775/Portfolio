@@ -242,25 +242,52 @@ button {
   width: 58%;
 }
 
-.hero-text h1 {
-  font: 800 clamp(80px, 14vw, 230px)/0.76 "Syne";
-  letter-spacing: -0.1em;
-  margin: 50px 0 35px;
-  color: var(--fog);
+.hero-headline {
+  margin: 35px 0 28px;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-text h1 i {
+.hero-name-line {
+  font: 800 clamp(42px, 7.5vw, 115px)/0.88 "Syne", sans-serif;
+  letter-spacing: -0.05em;
+  color: var(--fog);
+  display: block;
+}
+
+.hero-name-line.stroked i {
   color: transparent;
-  -webkit-text-stroke: 1px var(--fog);
+  -webkit-text-stroke: 1.5px var(--fog);
   font-style: normal;
 }
 
-.hero-text h1 span {
+.hero-degree-lockup {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-degree-kicker {
+  font: 500 clamp(10px, 1.2vw, 12px) "DM Mono", monospace;
+  letter-spacing: 0.22em;
   color: var(--amber);
-  font: 400 0.18em "DM Mono";
+  text-transform: uppercase;
+}
+
+.hero-degree-title {
+  font: 700 clamp(20px, 3.6vw, 44px)/1.05 "Syne", sans-serif;
+  letter-spacing: -0.04em;
+  color: var(--fog);
+  word-break: normal;
+}
+
+.hero-degree-title span {
+  color: var(--amber);
+  font: 400 0.35em "DM Mono", monospace;
   letter-spacing: 0;
   vertical-align: top;
-  margin-left: 10px;
+  margin-left: 6px;
 }
 
 .hero-sub {
@@ -932,8 +959,14 @@ button {
   .hero-text {
     width: 90%;
   }
-  .hero-text h1 {
-    font-size: 18vw;
+  .hero-headline {
+    margin: 28px 0 24px;
+  }
+  .hero-name-line {
+    font-size: clamp(38px, 9.5vw, 75px);
+  }
+  .hero-degree-title {
+    font-size: clamp(18px, 4.8vw, 34px);
   }
   .scene-wrap {
     width: 100vw;
@@ -1004,8 +1037,20 @@ button {
   .hero-meta span:nth-child(2) {
     display: none;
   }
-  .hero-text h1 {
-    font-size: 21vw;
+  .hero-headline {
+    margin: 22px 0 18px;
+  }
+  .hero-name-line {
+    font-size: clamp(32px, 10.5vw, 46px);
+    line-height: 0.92;
+  }
+  .hero-degree-kicker {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+  .hero-degree-title {
+    font-size: clamp(17px, 5.2vw, 24px);
+    line-height: 1.1;
   }
   .scene-wrap {
     right: -35vw;
