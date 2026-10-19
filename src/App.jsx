@@ -97,6 +97,18 @@ const projects = [
     linkedinPost: "https://lnkd.in/p/gY8z3SKq",
     copy: "A social travel companion platform built around interest-based trip matching, community coordination, and multi-tier identity verification. Implemented a Tri-Level Trust & Safety (KYC) in-memory DPDP-compliant verification pipeline utilizing OCR and selfie matching without permanent raw media retention. Backed by FastAPI, SQLAlchemy 2.0, PostgreSQL, Docker, and Flutter with Firebase phone OTP authorization." 
   },
+  { 
+    id: "07", 
+    type: "AUTONOMOUS AGENTS & LLM ORCHESTRATION", 
+    title: "Support Triage Agent", 
+    meta: "LangGraph / Gemini 2.5 / n8n", 
+    stat: "Deterministic Guardrails", 
+    image: "/images/triage_agent.png", 
+    fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/Autonomous-Support-Ticket-Triage-Resolution-Agent",
+    linkedinPost: "https://lnkd.in/p/gK_vmWze",
+    copy: "A production-grade autonomous customer support triage microservice built with Python 3.13, LangChain / LangGraph, Google Gemini 2.5 Flash, FastAPI, and n8n Workflow Automation. Unlike simple prompt wrappers that guess answers, this system acts like a senior customer support engineer: it autonomously investigates internal databases, billing records, and company SOP runbooks before formulating a verified triage decision and staging refunds with strict deterministic Python guardrails (forcing human sign-off for P0/P1 outages and refund staging, active prompt injection defense, and sub-ms idempotency caching)." 
+  },
 ];
 
 const capabilities = [
@@ -326,10 +338,10 @@ function App() {
         {/* Infinite Kinetic Marquee */}
         <div className="marquee" data-testid="marquee-section">
           <div>
-            COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP & FINBERT <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> FLUTTER & DART <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
-            COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP & FINBERT <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> FLUTTER & DART <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
-            COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP & FINBERT <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> FLUTTER & DART <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
-            COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP & FINBERT <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> FLUTTER & DART <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
+            AUTONOMOUS AGENTS & LANGGRAPH <i>✳</i> COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
+            AUTONOMOUS AGENTS & LANGGRAPH <i>✳</i> COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
+            AUTONOMOUS AGENTS & LANGGRAPH <i>✳</i> COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
+            AUTONOMOUS AGENTS & LANGGRAPH <i>✳</i> COMPUTER VISION <i>✳</i> BIOMECHANICS & KINEMATICS <i>✳</i> FINANCIAL NLP <i>✳</i> EDGE AI IN HEALTHCARE <i>✳</i> HIGH-THROUGHPUT FASTAPI <i>✳</i> IIT GUWAHATI <i>✳</i>&nbsp;
           </div>
         </div>
 
@@ -344,7 +356,7 @@ function App() {
               with physical reality.
             </h2>
             <p className="manifesto-body">
-              Whether tracking dynamic elbow joint extension in sports biomechanics under strict ICC regulations, isolating micro-capillary beds under clinical noise, or parsing complex receipt layouts with sub-paisa mathematical fairness — I bridge computational algorithms with real-world physical constraints.
+              Whether tracking dynamic elbow joint extension in sports biomechanics under strict ICC regulations, isolating micro-capillary beds under clinical noise, or deploying autonomous tool-calling agents with deterministic refund guardrails — I bridge computational algorithms with real-world physical and operational constraints.
             </p>
           </div>
           <div className="manifesto-aside">
@@ -362,7 +374,7 @@ function App() {
               Things I’ve<br />
               <em>put in motion.</em>
             </h2>
-            <p>Six production-ready engineering architectures built from first principles.</p>
+            <p>Seven production-ready engineering architectures built from first principles.</p>
           </div>
 
           <div className="cards">
@@ -391,7 +403,7 @@ function App() {
                       }}
                     />
                   )}
-                  <span className="case-number">{project.id} / 06</span>
+                  <span className="case-number">{project.id} / 07</span>
                   {project.video && (
                     <span className="case-badge">MOTION ACTIVE</span>
                   )}
