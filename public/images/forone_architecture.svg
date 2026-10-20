@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.035)" stroke-width="1" />
+    </pattern>
+    <pattern id="subgrid" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="none" stroke="rgba(217, 149, 63, 0.06)" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d9953f" stop-opacity="1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141820" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0c0e12" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(217, 149, 63, 0.25)" />
+      <stop offset="100%" stop-color="rgba(217, 149, 63, 0.02)" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.2)" />
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.02)" />
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.25)" />
+      <stop offset="100%" stop-color="rgba(16, 185, 129, 0.02)" />
+    </linearGradient>
+
+    <!-- Filter for Glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Slate Background -->
+  <rect width="100%" height="100%" fill="#080a0d" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  <rect width="100%" height="100%" fill="url(#subgrid)" />
+
+  <!-- Ambient Backdrop Circles -->
+  <circle cx="280" cy="240" r="180" fill="url(#cyanGlow)" filter="url(#softGlow)" />
+  <circle cx="820" cy="450" r="240" fill="url(#goldGlow)" filter="url(#softGlow)" />
+  <circle cx="1320" cy="650" r="200" fill="url(#greenGlow)" filter="url(#softGlow)" />
+
+  <!-- Technical Watermark / Spec Kicker -->
+  <text x="60" y="70" fill="rgba(228, 233, 229, 0.45)" font-family="'DM Mono', monospace" font-size="12" letter-spacing="3">SYSTEM ARCHITECTURE SPECIFICATION /// FORONE-SYS-2026</text>
+  <text x="60" y="115" fill="#e4e9e5" font-family="'Cinzel', serif" font-weight="700" font-size="36" letter-spacing="2">FORONE <tspan fill="#d9953f">®</tspan></text>
+  <text x="260" y="113" fill="#8892b0" font-family="'DM Mono', monospace" font-size="14" letter-spacing="1.5">| AI-PERSONALIZED DUAL-STT EDUCATION PLATFORM</text>
+  <text x="60" y="145" fill="#8892b0" font-family="'DM Mono', monospace" font-size="12" letter-spacing="1">ONE MASTER LECTURE IN ──► INFINITELY PERSONALIZED NEURAL LECTURES OUT (100% FACTUAL FIDELITY)</text>
+
+  <!-- Status Badges Top Right -->
+  <g transform="translate(1180, 50)">
+    <rect width="360" height="42" rx="4" fill="#141820" stroke="rgba(217, 149, 63, 0.4)" stroke-width="1" />
+    <circle cx="22" cy="21" r="5" fill="#10b981" />
+    <text x="38" y="26" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="12" letter-spacing="1.5">AUDIT: 100% PROPOSITION PASS</text>
+  </g>
+
+  <!-- ==================== FLOW CONNECTIONS (BUS LINES) ==================== -->
+  <g stroke="rgba(217, 149, 63, 0.35)" stroke-width="2" fill="none">
+    <!-- Master -> Faster-Whisper -->
+    <path d="M 240 330 L 240 390" marker-end="url(#arrow)" />
+    <!-- Faster-Whisper -> Persona Rewriter -->
+    <path d="M 240 540 L 240 600 L 490 600 L 490 320" />
+    <!-- Master -> LipSync direct feed -->
+    <path d="M 330 265 L 850 265 L 850 330" stroke-dasharray="4,4" stroke="rgba(56, 189, 248, 0.4)" />
+    <!-- Persona Rewriter -> 4 Personas split -->
+    <path d="M 640 400 L 710 400" />
+    <!-- Personas -> Neural Voice -->
+    <path d="M 710 400 L 710 630 L 770 630" />
+    <!-- Neural Voice -> LipSync / Compositor -->
+    <path d="M 940 630 L 980 630 L 980 470 L 1020 470" />
+    <!-- LipSync -> Dual-STT Audit -->
+    <path d="M 1200 470 L 1260 470" />
+    <!-- Dual-STT Audit -> Player -->
+    <path d="M 1370 560 L 1370 630" />
+    <!-- Whisper proposition ground-truth to Dual-STT verifier -->
+    <path d="M 330 465 L 430 465 L 430 180 L 1370 180 L 1370 370" stroke-dasharray="6,4" stroke="rgba(16, 185, 129, 0.5)" />
+  </g>
+
+  <!-- ==================== STAGE 1: MASTER INGEST ==================== -->
+  <g transform="translate(60, 200)">
+    <rect width="270" height="130" rx="6" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1.5" />
+    <rect x="0" y="0" width="270" height="28" rx="6" fill="rgba(56, 189, 248, 0.12)" />
+    <text x="16" y="19" fill="#38bdf8" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">01 // MASTER LECTURE INGEST</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="15" font-weight="700">Raw MP4 / WAV Master</text>
+    <text x="16" y="82" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">Single authoritative source video</text>
+    <text x="16" y="105" fill="#38bdf8" font-family="'DM Mono', monospace" font-size="11">FastAPI Streaming Ingestion</text>
+  </g>
+
+  <!-- ==================== STAGE 2: FASTER-WHISPER STT ==================== -->
+  <g transform="translate(60, 390)">
+    <rect width="270" height="150" rx="6" fill="url(#cardGrad)" stroke="rgba(16, 185, 129, 0.5)" stroke-width="1.5" />
+    <rect x="0" y="0" width="270" height="28" rx="6" fill="rgba(16, 185, 129, 0.12)" />
+    <text x="16" y="19" fill="#10b981" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">02 // PROPOSITION EXTRACTION</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="15" font-weight="700">Faster-Whisper STT</text>
+    <text x="16" y="82" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">Extracts T_master transcript</text>
+    <text x="16" y="102" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="11">Deconstructs Atomic Fact Vector</text>
+    <rect x="16" y="116" width="238" height="20" rx="3" fill="rgba(16, 185, 129, 0.15)" />
+    <text x="24" y="130" fill="#10b981" font-family="'DM Mono', monospace" font-size="9" letter-spacing="0.5">GROUND-TRUTH SYLLABUS AUDIT LOG</text>
+  </g>
+
+  <!-- ==================== STAGE 3: PERSONA REWRITER ==================== -->
+  <g transform="translate(390, 260)">
+    <rect width="250" height="280" rx="6" fill="url(#cardGrad)" stroke="rgba(217, 149, 63, 0.5)" stroke-width="1.5" />
+    <rect x="0" y="0" width="250" height="28" rx="6" fill="rgba(217, 149, 63, 0.12)" />
+    <text x="16" y="19" fill="#d9953f" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">03 // COGNITIVE REWRITER</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="16" font-weight="700">Gemini 2.5 Flash</text>
+    <text x="16" y="78" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">&amp; Groq Llama-3.3 70B</text>
+    
+    <line x1="16" y1="96" x2="234" y2="96" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <text x="16" y="118" fill="#d9953f" font-family="'DM Mono', monospace" font-size="10" letter-spacing="1">4 ADAPTIVE LEARNER PERSONAS:</text>
+
+    <!-- Mini Personas Pill List -->
+    <g transform="translate(16, 130)">
+      <rect width="218" height="26" rx="3" fill="#1a1e28" stroke="rgba(217, 149, 63, 0.25)" />
+      <text x="10" y="17" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="10">🎭 1. SUPPORTIVE MENTOR</text>
+    </g>
+    <g transform="translate(16, 162)">
+      <rect width="218" height="26" rx="3" fill="#1a1e28" stroke="rgba(217, 149, 63, 0.25)" />
+      <text x="10" y="17" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="10">⚡ 2. EXAM CRAM SPECIALIST</text>
+    </g>
+    <g transform="translate(16, 194)">
+      <rect width="218" height="26" rx="3" fill="#1a1e28" stroke="rgba(217, 149, 63, 0.25)" />
+      <text x="10" y="17" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="10">🎮 3. WITTY &amp; POP-CULTURE</text>
+    </g>
+    <g transform="translate(16, 226)">
+      <rect width="218" height="26" rx="3" fill="#1a1e28" stroke="rgba(217, 149, 63, 0.25)" />
+      <text x="10" y="17" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="10">📐 4. INTUITIVE VISUALIST</text>
+    </g>
+  </g>
+
+  <!-- ==================== STAGE 4: NEURAL VOICE ENGINE ==================== -->
+  <g transform="translate(690, 560)">
+    <rect width="250" height="140" rx="6" fill="url(#cardGrad)" stroke="rgba(168, 85, 247, 0.5)" stroke-width="1.5" />
+    <rect x="0" y="0" width="250" height="28" rx="6" fill="rgba(168, 85, 247, 0.12)" />
+    <text x="16" y="19" fill="#c084fc" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">04 // NEURAL VOICE</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="15" font-weight="700">ElevenLabs &amp; Edge-TTS</text>
+    <text x="16" y="82" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">Persona cadence cloning</text>
+    <text x="16" y="104" fill="#c084fc" font-family="'DM Mono', monospace" font-size="11">Acoustic inflection matching</text>
+  </g>
+
+  <!-- ==================== STAGE 5: NEURAL LIP-SYNC & COMPOSITOR ==================== -->
+  <g transform="translate(980, 330)">
+    <rect width="250" height="220" rx="6" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1.5" />
+    <rect x="0" y="0" width="250" height="28" rx="6" fill="rgba(56, 189, 248, 0.12)" />
+    <text x="16" y="19" fill="#38bdf8" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">05 // NEURAL LIP-SYNC</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="16" font-weight="700">Sync Labs API</text>
+    <text x="16" y="78" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">lipsync-2 / sync-3 model</text>
+    <line x1="16" y1="96" x2="234" y2="96" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <text x="16" y="118" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="12">FFmpeg Video Muxer</text>
+    <text x="16" y="138" fill="#8892b0" font-family="'DM Mono', monospace" font-size="10">Continuous PTS scaling (setpts)</text>
+    <text x="16" y="156" fill="#8892b0" font-family="'DM Mono', monospace" font-size="10">Zero audio-video loop drift</text>
+    <rect x="16" y="174" width="218" height="24" rx="3" fill="rgba(56, 189, 248, 0.15)" />
+    <text x="24" y="190" fill="#38bdf8" font-family="'DM Mono', monospace" font-size="10" letter-spacing="0.5">SYNTHESIZED VIDEO (T_gen)</text>
+  </g>
+
+  <!-- ==================== STAGE 6: DUAL-STT FACTUAL FIDELITY FAILSAFE ==================== -->
+  <g transform="translate(1260, 310)">
+    <rect width="280" height="240" rx="6" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2" />
+    <rect x="0" y="0" width="280" height="32" rx="6" fill="rgba(16, 185, 129, 0.18)" />
+    <text x="16" y="21" fill="#10b981" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">06 // FAILSAFE AUDITOR 🛡️</text>
+    <text x="16" y="62" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="16" font-weight="700">Dual-STT Semantic Check</text>
+    <text x="16" y="84" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">Independent Faster-Whisper on T_gen</text>
+    <line x1="16" y1="102" x2="264" y2="102" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <text x="16" y="124" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="11">Bidirectional Proposition Matrix:</text>
+    <text x="16" y="144" fill="#10b981" font-family="'DM Mono', monospace" font-size="10">✔ All syllabus constants retained</text>
+    <text x="16" y="162" fill="#10b981" font-family="'DM Mono', monospace" font-size="10">✔ No hallucinatory claims introduced</text>
+    <rect x="16" y="180" width="248" height="42" rx="4" fill="#0d1f17" stroke="#10b981" stroke-width="1" />
+    <text x="24" y="198" fill="#10b981" font-family="'DM Mono', monospace" font-size="10" font-weight="700">PASS CRITERIA: 100% FIDELITY</text>
+    <text x="24" y="214" fill="#8892b0" font-family="'DM Mono', monospace" font-size="9">&lt; 100% ──► HALT &amp; FLAG HUMAN REVIEW</text>
+  </g>
+
+  <!-- ==================== STAGE 7: INTERACTIVE PLAYER & QUIZZES ==================== -->
+  <g transform="translate(1220, 630)">
+    <rect width="320" height="150" rx="6" fill="url(#cardGrad)" stroke="rgba(217, 149, 63, 0.6)" stroke-width="1.5" />
+    <rect x="0" y="0" width="320" height="28" rx="6" fill="rgba(217, 149, 63, 0.15)" />
+    <text x="16" y="19" fill="#d9953f" font-family="'DM Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">07 // INTERACTIVE DELIVERY</text>
+    <text x="16" y="58" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="16" font-weight="700">Real-Time Persona Switching</text>
+    <text x="16" y="80" fill="#8892b0" font-family="'DM Mono', monospace" font-size="11">Dynamic Contextual Micro-Quizzes</text>
+    <text x="16" y="100" fill="#e4e9e5" font-family="'DM Mono', monospace" font-size="11">React + Tailwind Glassmorphic Player</text>
+    <text x="16" y="122" fill="#d9953f" font-family="'DM Mono', monospace" font-size="11">Infinite Personalization per Learner</text>
+  </g>
+
+  <!-- Technical Spec Footer -->
+  <g transform="translate(60, 830)">
+    <line x1="0" y1="0" x2="1480" y2="0" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <text x="0" y="30" fill="rgba(228, 233, 229, 0.4)" font-family="'DM Mono', monospace" font-size="11" letter-spacing="1.5">TECH STACK: FASTAPI / REACT / GEMINI FLASH 2.5 / GROQ LLAMA-3.3 70B / ELEVENLABS / SYNC LABS / FASTER-WHISPER / FFMPEG</text>
+    <text x="1260" y="30" fill="#d9953f" font-family="'DM Mono', monospace" font-size="11" letter-spacing="1.5">HARDIK SINGH // IIT GUWAHATI</text>
+  </g>
+</svg>

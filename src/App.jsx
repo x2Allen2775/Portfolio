@@ -109,6 +109,18 @@ const projects = [
     linkedinPost: "https://lnkd.in/p/gf96Nsr5",
     copy: "A computer-vision sports analytics platform performing real-time pose estimation to identify injury vulnerabilities in Cricket and Tennis. Implements an ICC 15° Rule Legality Engine tracking dynamic elbow extension angles across 8 delivery phases, alongside knee joint strain and trunk lateral tilt analysis to predict rotator cuff and lumbar disc injuries." 
   },
+  { 
+    id: "08", 
+    type: "SYNTHETIC VIDEO & FACTUAL VERIFICATION", 
+    title: "ForOne", 
+    meta: "FastAPI / Gemini / Sync Labs / ElevenLabs", 
+    stat: "100% Factual Fidelity", 
+    badge: "ARCHITECTURE BLUEPRINT",
+    image: "/images/forone_architecture.svg", 
+    fallbackImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85",
+    github: "https://github.com/x2Allen2775/ForOne",
+    copy: "An end-to-end autonomous education engine that synthesizes personalized, neural-lip-synced video lectures tailored to every student's cognitive style, learning pace, and personal interests—backed by a 100% Factual Fidelity Failsafe Verifier. Features 4 adaptive learner personas (Supportive Mentor, Exam Cram Specialist, Witty Pop-Culture, and Intuitive Visualist), Sync Labs neural lip-syncing with continuous PTS scaling, dynamic contextual micro-quizzes, and a dual-STT semantic auditor that compares synthesized speech against ground-truth master propositions to halt generation if fidelity drops below 100%." 
+  },
 ];
 
 const capabilities = [
@@ -374,7 +386,7 @@ function App() {
               Things I’ve<br />
               <em>put in motion.</em>
             </h2>
-            <p>Seven production-ready engineering architectures built from first principles.</p>
+            <p>Eight production-ready engineering architectures built from first principles.</p>
           </div>
 
           <div className="cards">
@@ -403,10 +415,12 @@ function App() {
                       }}
                     />
                   )}
-                  <span className="case-number">{project.id} / 07</span>
-                  {project.video && (
+                  <span className="case-number">{project.id} / 08</span>
+                  {project.video ? (
                     <span className="case-badge">MOTION ACTIVE</span>
-                  )}
+                  ) : project.badge ? (
+                    <span className="case-badge" style={{ borderColor: 'var(--amber)', color: 'var(--amber)' }}>{project.badge}</span>
+                  ) : null}
                   <button 
                     className="case-open" 
                     onClick={() => setActiveProject(project)} 
